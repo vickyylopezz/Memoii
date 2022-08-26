@@ -7,7 +7,9 @@ class Chopper
     -1
   end
 
-  def sum(_array)
+  def sum(array)
+    return 'uno' if array.size.positive?
+
     'vacio'
   end
 end
