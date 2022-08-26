@@ -6,4 +6,8 @@ class Chopper
 
     -1
   end
+
+  def sum(_array)
+    'vacio'
+  end
 end
