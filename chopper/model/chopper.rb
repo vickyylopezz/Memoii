@@ -15,6 +15,7 @@ class Chopper
       suma += element
     end
 
+    return 'demasiado grande' if suma > 99
     return to_words(suma / 10) + ',' + to_words(suma % 10) if suma > 9
 
     to_words(suma)
