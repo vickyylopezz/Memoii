@@ -8,7 +8,8 @@ class Chopper
   end
 
   def sum(array)
-    return 'uno' if array.size.positive?
+    return 'cuatro' if array.size > 1
+    return 'uno' if array.size == 1
 
     'vacio'
   end
