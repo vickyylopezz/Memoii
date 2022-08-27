@@ -2,3 +2,4 @@
 2. Creo tests simples para calcular el alquiler por hora, dia y kilometros.
 3. Voy agregando la logica a la funcion de calcular dependiendo el tipo de alquiler.
 4. Agrego test y logica para hacer descuento si el cliente es una empresa
+5. Agrego logica y tests para recargo por devolver luego de la fecha el auto

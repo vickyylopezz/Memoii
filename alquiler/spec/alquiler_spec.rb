@@ -35,7 +35,11 @@ describe 'Alquiler' do
     expect(alquiler.calcular(5,"k", "26112223336", 20190119, 20190119)).to eq 142.5
   end
 
-  it 'alquiler por 2 dias devuelto despues deberia ser 4000' do
-    expect(alquiler.calcular(2,"d", "20112223336",20190119, 20190120)).to eq 4000
+  it 'alquiler por 2 dias devuelto despues deberia ser 8000' do
+    expect(alquiler.calcular(2,"d", "20112223336",20190119, 20190122)).to eq 8000
+  end
+
+  it 'alquiler por 1 dias devuelto despues deberia ser 4000' do
+    expect(alquiler.calcular(1,"d", "20112223336",20190119, 20190122)).to eq 4000
   end
 end

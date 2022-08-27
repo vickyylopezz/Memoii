@@ -8,7 +8,12 @@ class Alquiler
     costo = 100 + 10 * parametros_alquiler if tipo_alquiler == 'k'
 
     costo = aplicar_descuento(costo, cuit)
-    aplicar_recargo(costo, fecha_alquiler, fecha_devolucion)
+
+    if tipo_alquiler == 'd'
+      costo = aplicar_recargo(costo, fecha_alquiler, fecha_devolucion, parametros_alquiler)
+    end
+
+    costo
   end
 
   def aplicar_descuento(monto, cuit)
@@ -17,8 +22,8 @@ class Alquiler
     monto
   end
 
-  def aplicar_recargo(monto, fecha_alquiler, fecha_devolucion)
-    return 4000 if fecha_devolucion > fecha_alquiler
+  def aplicar_recargo(monto, fecha_alquiler, fecha_devolucion, cant_dias)
+    return monto + monto if fecha_devolucion - fecha_alquiler > cant_dias
 
     monto
   end
