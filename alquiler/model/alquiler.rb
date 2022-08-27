@@ -1,8 +1,9 @@
 class Alquiler
-  def calcular(parametros_alquiler, tipo_alquiler) # rubocop:disable Lint/UnusedMethodArgument
-    return 130 if tipo_alquiler == 'k'
-    return 10_000 if tipo_alquiler == 'd'
+  def calcular(parametros_alquiler, tipo_alquiler)
+    return 100 * parametros_alquiler if tipo_alquiler == 'h'
 
-    300
+    return 130 if tipo_alquiler == 'k'
+
+    10_000 if tipo_alquiler == 'd'
   end
 end
