@@ -4,6 +4,6 @@ class Alquiler
 
     return 2000 * parametros_alquiler if tipo_alquiler == 'd'
 
-    130 if tipo_alquiler == 'k'
+    100 + 10 * parametros_alquiler if tipo_alquiler == 'k'
   end
 end

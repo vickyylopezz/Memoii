@@ -11,8 +11,8 @@ describe 'Alquiler' do
     expect(alquiler.calcular(5,"d")).to eq 10000
   end
 
-  it 'alquiler de 2 km deberia ser 130' do
-    expect(alquiler.calcular(2,"k")).to eq 130
+  it 'alquiler de 2 km deberia ser 120' do
+    expect(alquiler.calcular(2,"k")).to eq 120
   end
 
   it 'alquiler de 6 horas deberia ser 600' do
@@ -21,5 +21,9 @@ describe 'Alquiler' do
 
   it 'alquiler de 1 dia deberia ser 2000' do
     expect(alquiler.calcular(1,"d")).to eq 2000
+  end
+
+  it 'alquiler de 10 km deberia ser 200' do
+    expect(alquiler.calcular(10,"k")).to eq 200
   end
 end
