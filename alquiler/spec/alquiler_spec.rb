@@ -18,4 +18,8 @@ describe 'Alquiler' do
   it 'alquiler de 6 horas deberia ser 600' do
     expect(alquiler.calcular(6,"h")).to eq 600
   end
+
+  it 'alquiler de 1 dia deberia ser 2000' do
+    expect(alquiler.calcular(1,"d")).to eq 2000
+  end
 end
