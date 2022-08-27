@@ -10,5 +10,10 @@ describe 'App' do
     resultado = `ruby app.rb 20190119 20190119 20112223336 d 1`
     expect(resultado.strip).to eq "importe: 2000"
   end
+
+  it 'sin entrada muestra error' do
+    resultado = `ruby app.rb`
+    expect(resultado.strip).to eq 'error: entrada requerida'
+  end
 end
 
