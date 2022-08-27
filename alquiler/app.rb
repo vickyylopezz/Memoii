@@ -1,4 +1,5 @@
 require_relative './model/alquiler'
+require 'date'
 
 fecha_inicio = ARGV[0]
 fecha_fin = ARGV[1]
@@ -11,6 +12,8 @@ if fecha_inicio.nil? || fecha_fin.nil? || cuit.nil? || tipo.nil? || cant_alquile
   exit 1
 end
 
-resultado = Alquiler.new.calcular(cant_alquiler.to_i, tipo, cuit, fecha_inicio.to_i, fecha_fin.to_i)
+inicio = Date.parse(fecha_inicio)
+fin = Date.parse(fecha_fin)
+resultado = Alquiler.new.calcular(cant_alquiler.to_i, tipo, cuit, inicio, fin)
 
 puts "importe: #{resultado}"

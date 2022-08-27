@@ -2,7 +2,7 @@ class Alquiler
   COSTO_HORA = 100
   COSTO_DIA = 2000
   COSTO_KM = 10
-  BASE_KM = 100
+  COSTO_BASE_KM = 100
   HORA = 'h'.freeze
   DIA = 'd'.freeze
   KM = 'k'.freeze
@@ -12,7 +12,7 @@ class Alquiler
 
     costo = COSTO_DIA * parametros_alquiler if tipo_alquiler == DIA
 
-    costo = BASE_KM + COSTO_KM * parametros_alquiler if tipo_alquiler == KM
+    costo = COSTO_BASE_KM + COSTO_KM * parametros_alquiler if tipo_alquiler == KM
 
     costo = aplicar_descuento(costo, cuit)
 
@@ -26,7 +26,7 @@ class Alquiler
   end
 
   def aplicar_recargo(monto, fecha_alquiler, fecha_devolucion, cant_dias, tipo_alquiler)
-    return monto + monto if fecha_devolucion - fecha_alquiler > cant_dias && tipo_alquiler == 'd'
+    return monto + monto if fecha_devolucion - fecha_alquiler > cant_dias && tipo_alquiler == DIA
 
     monto
   end
