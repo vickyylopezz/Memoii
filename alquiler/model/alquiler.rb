@@ -7,8 +7,12 @@ class Alquiler
 
     costo = 100 + 10 * parametros_alquiler if tipo_alquiler == 'k'
 
-    return costo - costo * 0.05 if cuit.match(/^26/)
+    aplicar_descuento(costo, cuit)
+  end
 
-    costo
+  def aplicar_descuento(monto, cuit)
+    return monto - monto * 0.05 if cuit.match(/^26/)
+
+    monto
   end
 end

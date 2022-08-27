@@ -30,4 +30,8 @@ describe 'Alquiler' do
   it 'alquiler de empresa por 10 horas deberia ser 950' do
     expect(alquiler.calcular(10,"h", "26112223336")).to eq 950
   end
+
+  it 'alquiler de empresa por 5 km deberia ser 142.5' do
+    expect(alquiler.calcular(5,"k", "26112223336")).to eq 142.5
+  end
 end
