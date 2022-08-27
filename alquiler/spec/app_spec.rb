@@ -15,5 +15,12 @@ describe 'App' do
     resultado = `ruby app.rb`
     expect(resultado.strip).to eq 'error: entrada requerida'
   end
+
+  it 'sin entrada muestra error' do
+    resultado = `ruby app.rb 20190119`
+    expect(resultado.strip).to eq 'error: entrada requerida'
+  end
+
+
 end
 
