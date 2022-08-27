@@ -8,7 +8,7 @@ describe 'Alquiler' do
   end
 
   it 'alquiler de 5 dias deberia ser 10000' do
-    expect(alquiler.calcular(5,"d", "20112223336", 20190119, 20190119)).to eq 10000
+    expect(alquiler.calcular(5,"d", "20112223336", 20190119, 20190124)).to eq 10000
   end
 
   it 'alquiler de 2 km deberia ser 120' do
@@ -20,7 +20,7 @@ describe 'Alquiler' do
   end
 
   it 'alquiler de 1 dia deberia ser 2000' do
-    expect(alquiler.calcular(1,"d", "20112223336", 20190119, 20190119)).to eq 2000
+    expect(alquiler.calcular(1,"d", "20112223336", 20190119, 20190120)).to eq 2000
   end
 
   it 'alquiler de 10 km deberia ser 200' do
@@ -41,5 +41,9 @@ describe 'Alquiler' do
 
   it 'alquiler por 1 dias devuelto despues deberia ser 4000' do
     expect(alquiler.calcular(1,"d", "20112223336",20190119, 20190122)).to eq 4000
+  end
+
+  it 'alquiler por 4 dias devuelto antes se cobra por 4 dias (8000)' do
+    expect(alquiler.calcular(4,"d", "20112223336",20190119, 20190120)).to eq 8000
   end
 end
