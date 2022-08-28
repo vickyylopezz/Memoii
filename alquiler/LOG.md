@@ -9,5 +9,5 @@ Paso a paso:
 8. Refactor de alquier, creo clase TipoDeAlquiler para poder aplicar polimorfismo.
 
 Supuestos:
-- El recargo solo se calcula en los alquileres por dia ya que por hora y por kilometro no se tienen los datos necesarios.
+- El recargo solo se calcula en los alquileres por dia ya que por hora y por kilometro no se tienen los datos necesarios. 
 - Si se alquila por 24 horas se calcula por 24 horas y no por 1 dia.
