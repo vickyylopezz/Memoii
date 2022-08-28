@@ -14,6 +14,6 @@ end
 
 inicio = Date.parse(fecha_inicio)
 fin = Date.parse(fecha_fin)
-resultado = Alquiler.new.calcular(cant_alquiler.to_i, tipo, cuit, inicio, fin)
+resultado = Alquiler.new(tipo).calcular(cant_alquiler.to_i, inicio, fin, cuit)
 
 puts "importe: #{resultado}"

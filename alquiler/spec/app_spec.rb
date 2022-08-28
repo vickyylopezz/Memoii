@@ -16,7 +16,7 @@ describe 'App' do
     expect(resultado.strip).to eq 'error: entrada requerida'
   end
 
-  it 'sin entrada muestra error' do
+  it 'entrada incompleta muestra error' do
     resultado = `ruby app.rb 20190119`
     expect(resultado.strip).to eq 'error: entrada requerida'
   end
@@ -35,7 +35,6 @@ describe 'App' do
     resultado = `ruby app.rb 20190131 20190203 20112223336 d 3`
     expect(resultado.strip).to eq "importe: 6000"
   end
-
 
 end
 

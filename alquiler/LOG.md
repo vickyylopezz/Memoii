@@ -6,6 +6,7 @@ Paso a paso:
 5. Agrego logica y tests para recargo por devolver luego de la fecha indicada.
 6. Agrego test y logica para pedir por consola e imprimir por pantalla.
 7. Refactor de alquiler (agrego constantes).
+8. Refactor de alquier, creo clase TipoDeAlquiler para poder aplicar polimorfismo.
 
 Supuestos:
 - El recargo solo se calcula en los alquileres por dia ya que por hora y por kilometro no se tienen los datos necesarios.
