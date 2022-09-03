@@ -14,4 +14,8 @@ describe 'Luchador' do
     expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("mano"), Estadio.new).puntaje).to eq 3
   end
 
+  it '04-Puntaje de lobo-con-espada en estadio es 6' do
+    expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("espada"), Estadio.new).puntaje).to eq 6
+  end
+
 end
