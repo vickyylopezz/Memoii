@@ -6,6 +6,7 @@ class Luchador
   end
 
   def puntaje
+    return 3 if @personaje.instance_of? Lobo
     return 1 if @arma.instance_of? Mano
 
     2
