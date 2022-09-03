@@ -1,0 +1,2 @@
+class Mano
+end
