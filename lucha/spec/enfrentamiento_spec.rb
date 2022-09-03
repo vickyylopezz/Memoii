@@ -50,4 +50,8 @@ describe 'Enfrentamiento' do
   it '12-Lobo-con-mano vs Humano-con-espada en estadio da como resultado gana 1' do
     expect(enfrentamiento.luchar(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("mano"), Estadio.new), Luchador.new(Humano.new, FactoryArma.new.crear_arma("espada"), Estadio.new))).to eq  'gana 1'
   end
+
+  xit '13-Lobo-con-espada vs Lobo-con-mano en estadio da como resultado gana 1' do
+    expect(enfrentamiento.luchar(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("espada"), Estadio.new), Luchador.new(Lobo.new, FactoryArma.new.crear_arma("mano"), Estadio.new))).to eq  'gana 1'
+  end
 end

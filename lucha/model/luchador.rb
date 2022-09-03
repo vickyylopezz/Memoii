@@ -4,4 +4,8 @@ class Luchador
     @personaje = personaje
     @arma = arma
   end
+
+  def puntaje
+    2
+  end
 end
