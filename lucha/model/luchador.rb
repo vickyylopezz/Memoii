@@ -1,3 +1,6 @@
 class Luchador
-  def initialize(personaje, arma, escenario); end
+  attr_reader :arma
+  def initialize(_personaje, arma, _escenario)
+    @arma = arma
+  end
 end
