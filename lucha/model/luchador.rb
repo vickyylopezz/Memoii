@@ -8,7 +8,10 @@ class Luchador
 
   def puntaje
     puntaje = @personaje.calcular_puntaje_con(@arma)
-    puntaje += 2 if (@escenario.instance_of? Ciudad) && (@personaje.instance_of? Humano)
+    if (@escenario.instance_of? Ciudad) && (@personaje.instance_of? Humano)
+      puntaje += 2
+    elsif puntaje += puntaje
+    end
     puntaje
   end
 end
