@@ -1,9 +1,9 @@
 require_relative 'mano'
 
 class Enfrentamiento
-  def luchar(_luchador_uno, luchador_dos)
-    return 'gana 1' if luchador_dos.arma.instance_of? Mano
+  def luchar(luchador_uno, luchador_dos)
+    return 'empate' if luchador_uno.arma.class == luchador_dos.arma.class
 
-    'empate'
+    'gana 1'
   end
 end

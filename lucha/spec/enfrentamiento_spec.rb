@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Enfrentamiento' do
   let(:enfrentamiento) { Enfrentamiento.new }
 
-  it 'Humano-con-espada vs Humano-con-espada en estadio da empate' do
+  it 'Humano-con-espada vs Humano-con-espada en estadio da como resultado empate' do
     expect(enfrentamiento.luchar(Luchador.new(Humano.new, Espada.new, Estadio.new), Luchador.new(Humano.new, Espada.new, Estadio.new))).to eq  'empate'
   end
 
@@ -11,5 +11,8 @@ describe 'Enfrentamiento' do
     expect(enfrentamiento.luchar(Luchador.new(Humano.new, Espada.new, Estadio.new), Luchador.new(Humano.new, Mano.new, Estadio.new))).to eq  'gana 1'
   end
 
+  it 'Humano-con-mano vs Humano-con-mano en estadio da como resultado empate' do
+    expect(enfrentamiento.luchar(Luchador.new(Humano.new, Mano.new, Estadio.new), Luchador.new(Humano.new, Mano.new, Estadio.new))).to eq  'empate'
+  end
 
 end
