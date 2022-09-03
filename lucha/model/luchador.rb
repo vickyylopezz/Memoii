@@ -6,6 +6,8 @@ class Luchador
   end
 
   def puntaje
+    return 1 if @arma.instance_of? Mano
+
     2
   end
 end
