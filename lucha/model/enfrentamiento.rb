@@ -1,3 +1,5 @@
 class Enfrentamiento
-  def luchar(luchador_uno, luchador_dos); end
+  def luchar(_luchador_uno, _luchador_dos)
+    'empate'
+  end
 end
