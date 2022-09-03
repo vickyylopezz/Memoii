@@ -70,4 +70,9 @@ describe 'Enfrentamiento' do
   it '16-Lobo-con-mano vs Lobo-con-mano en estadio da como resultado empate' do
     expect(enfrentamiento.luchar(Luchador.new(lobo, mano, Estadio.new), Luchador.new(lobo, mano, Estadio.new))).to eq  'empate'
   end
+
+  it '17-Humano-con-espada vs Lobo-con-mano en ciudad da como resultado gana 1' do
+    expect(enfrentamiento.luchar(Luchador.new(humano, espada, Ciudad.new), Luchador.new(lobo, mano, Ciudad.new))).to eq  'gana 1'
+  end
+
 end
