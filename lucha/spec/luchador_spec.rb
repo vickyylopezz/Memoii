@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'Luchador' do
+  let(:espada) {FactoryArma.new.crear_arma("espada")}
+  let(:humano) {FactoryPersonaje.new.crear_personaje("humano")}
 
   it '01-Puntaje de humano-con-espada en estadio es 2' do
     expect(Luchador.new(Humano.new, FactoryArma.new.crear_arma("espada"), Estadio.new).puntaje).to eq 2
@@ -18,4 +20,7 @@ describe 'Luchador' do
     expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("espada"), Estadio.new).puntaje).to eq 6
   end
 
+  it '05-Puntaje de humano-con-espada en ciudad es 4' do
+    expect(Luchador.new(humano, espada, Ciudad.new).puntaje).to eq 4
+  end
 end

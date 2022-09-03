@@ -7,6 +7,7 @@ class Luchador
   end
 
   def puntaje
+    return 4 if @escenario.instance_of? Ciudad
     return 6 if (@personaje.instance_of? Lobo) && (@arma.instance_of? Espada)
     return 3 if @personaje.instance_of? Lobo
     return 1 if @arma.instance_of? Mano
