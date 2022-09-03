@@ -6,7 +6,7 @@ describe 'Luchador' do
   let(:humano) {FactoryPersonaje.new.crear_personaje("humano")}
   let(:lobo) {FactoryPersonaje.new.crear_personaje("lobo")}
 
-  xit '01-Puntaje de humano-con-espada en estadio es 3' do
+  it '01-Puntaje de humano-con-espada en estadio es 3' do
     expect(Luchador.new(humano, espada, Estadio.new).puntaje).to eq 3
   end
 
@@ -18,7 +18,7 @@ describe 'Luchador' do
     expect(Luchador.new(lobo, mano, Estadio.new).puntaje).to eq 6
   end
 
-  xit '04-Puntaje de lobo-con-espada en estadio es 9' do
+  it '04-Puntaje de lobo-con-espada en estadio es 9' do
     expect(Luchador.new(lobo, espada, Estadio.new).puntaje).to eq 9
   end
 
@@ -34,7 +34,7 @@ describe 'Luchador' do
     expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("mano"), Ciudad.new).puntaje).to eq 6
   end
 
-  xit '08-Puntaje de lobo-con-espada en ciudad es 9' do
+  it '08-Puntaje de lobo-con-espada en ciudad es 9' do
     expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("espada"), Ciudad.new).puntaje).to eq 9
   end
 end

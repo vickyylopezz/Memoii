@@ -16,10 +16,10 @@ describe 'Humano' do
   end
 
   it '03-Puntaje de lobo en estadio es 3' do
-    expect(lobo.calcular_puntaje_es(estadio)).to eq 3
+    expect(lobo.calcular_puntaje_en(estadio)).to eq 3
   end
 
   it '04-Puntaje de lobo en ciudad es 3' do
-    expect(lobo.calcular_puntaje_es(ciudad)).to eq 3
+    expect(lobo.calcular_puntaje_en(ciudad)).to eq 3
   end
 end
