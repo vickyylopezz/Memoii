@@ -28,4 +28,12 @@ describe 'Luchador' do
   it '06-Puntaje de humano-con-mano en ciudad es 3' do
     expect(Luchador.new(humano, mano, Ciudad.new).puntaje).to eq 3
   end
+
+  it '07-Puntaje de lobo-con-mano en ciudad es 3' do
+    expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("mano"), Ciudad.new).puntaje).to eq 3
+  end
+
+  it '08-Puntaje de lobo-con-espada en ciudad es 6' do
+    expect(Luchador.new(Lobo.new, FactoryArma.new.crear_arma("espada"), Ciudad.new).puntaje).to eq 6
+  end
 end
