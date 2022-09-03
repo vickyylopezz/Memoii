@@ -79,4 +79,12 @@ describe 'Enfrentamiento' do
     expect(enfrentamiento.luchar(Luchador.new(humano, espada, Ciudad.new), Luchador.new(humano, espada, Ciudad.new))).to eq  'empate'
   end
 
+  it '19-Humano-con-mano vs Lobo-con-espada en ciudad da como resultado gana 2' do
+    expect(enfrentamiento.luchar(Luchador.new(humano, mano, Ciudad.new), Luchador.new(lobo, espada, Ciudad.new))).to eq  'gana 2'
+  end
+
+  it '20-Humano-con-espada vs Humano-con-mano en ciudad da como resultado gana 1' do
+    expect(enfrentamiento.luchar(Luchador.new(humano, espada, Ciudad.new), Luchador.new(humano, mano, Ciudad.new))).to eq  'gana 1'
+  end
+
 end
