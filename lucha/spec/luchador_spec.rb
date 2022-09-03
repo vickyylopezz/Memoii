@@ -25,7 +25,7 @@ describe 'Luchador' do
     expect(Luchador.new(humano, espada, Ciudad.new).puntaje).to eq 4
   end
 
-  xit '06-Puntaje de humano-con-mano en ciudad es 3' do
+  it '06-Puntaje de humano-con-mano en ciudad es 3' do
     expect(Luchador.new(humano, mano, Ciudad.new).puntaje).to eq 3
   end
 end
