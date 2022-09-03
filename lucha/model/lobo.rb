@@ -4,4 +4,8 @@ class Lobo
 
     3
   end
+
+  def calcular_puntaje_es(_estadio)
+    3
+  end
 end
