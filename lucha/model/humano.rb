@@ -4,4 +4,8 @@ class Humano
 
     1
   end
+
+  def calcular_puntaje_en(_escenario)
+    1
+  end
 end
