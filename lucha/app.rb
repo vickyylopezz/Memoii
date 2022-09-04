@@ -17,7 +17,12 @@ personaje_uno = FactoryPersonaje.new.crear_personaje(personaje_uno)
 personaje_dos = FactoryPersonaje.new.crear_personaje(personaje_dos)
 arma_uno = FactoryArma.new.crear_arma(arma_uno)
 arma_dos = FactoryArma.new.crear_arma(arma_dos)
-escenario = FactoryEscenario.new.crear_escenario(escenario)
+begin
+  escenario = FactoryEscenario.new.crear_escenario(escenario)
+rescue EscenarioDesconocidoError
+  puts 'error: escenario desconocido'
+  exit 1
+end
 luchador_uno = Luchador.new(personaje_uno, arma_uno, escenario)
 luchador_dos = Luchador.new(personaje_dos, arma_dos, escenario)
 ganador = Enfrentamiento.new.luchar(luchador_uno, luchador_dos)
