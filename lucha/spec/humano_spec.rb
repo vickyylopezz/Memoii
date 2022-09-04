@@ -4,6 +4,7 @@ describe 'Humano' do
   let(:humano) {FactoryPersonaje.new.crear_personaje("humano")}
   let(:mano) {FactoryArma.new.crear_arma("mano")}
   let(:espada) {FactoryArma.new.crear_arma("espada")}
+  let(:cuchillo) {FactoryArma.new.crear_arma("cuchillo")}
   let(:estadio) {FactoryEscenario.new.crear_escenario("estadio")}
   let(:ciudad) {FactoryEscenario.new.crear_escenario("ciudad")}
 
@@ -21,5 +22,9 @@ describe 'Humano' do
 
   it '04-Puntaje de humano en ciudad es 2' do
     expect(humano.calcular_puntaje_en(ciudad)).to eq 2
+  end
+
+  it '05-Puntaje de humano-con-cuchillo es 3' do
+    expect(humano.calcular_puntaje_con(cuchillo)).to eq 3
   end
 end
