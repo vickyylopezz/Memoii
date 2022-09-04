@@ -1,4 +1,6 @@
 require_relative 'noche'
+require_relative 'lluvia'
+
 class FactoryEscenario
   def crear_escenario(escenario)
     if escenario == 'estadio'
@@ -7,6 +9,8 @@ class FactoryEscenario
       Ciudad.new
     elsif escenario == 'noche'
       Noche.new
+    elsif escenario == 'lluvia'
+      Lluvia.new
     end
   end
 end
