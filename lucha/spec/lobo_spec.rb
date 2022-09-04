@@ -7,6 +7,8 @@ describe 'Humano' do
   let(:cuchillo) {FactoryArma.new.crear_arma("cuchillo")}
   let(:estadio) {FactoryEscenario.new.crear_escenario("estadio")}
   let(:ciudad) {FactoryEscenario.new.crear_escenario("ciudad")}
+  let(:noche) {FactoryEscenario.new.crear_escenario("noche")}
+  let(:lluvia) {FactoryEscenario.new.crear_escenario("lluvia")}
 
   it '01-Puntaje de lobo-con-mano es 3' do
     expect(lobo.calcular_puntaje_con(mano)).to eq 3
@@ -24,7 +26,15 @@ describe 'Humano' do
     expect(lobo.calcular_puntaje_en(ciudad)).to eq 3
   end
 
-  it '02-Puntaje de lobo-con-cuchillo es 5' do
+  it '05-Puntaje de lobo-con-cuchillo es 5' do
     expect(lobo.calcular_puntaje_con(cuchillo)).to eq 5
+  end
+
+  it '06-Puntaje de lobo en noche es 3' do
+    expect(lobo.calcular_puntaje_en(noche)).to eq 3
+  end
+
+  it '07-Puntaje de lobo en lluvia es 3' do
+    expect(lobo.calcular_puntaje_en(lluvia)).to eq 3
   end
 end
