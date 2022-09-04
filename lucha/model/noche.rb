@@ -1,3 +1,5 @@
+require_relative 'escenario'
+
 class Noche < Escenario
   INCREMENTO_NOCHE = 2
 

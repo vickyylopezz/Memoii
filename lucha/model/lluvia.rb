@@ -1,3 +1,5 @@
+require_relative 'escenario'
+
 class Lluvia < Escenario
   DISMINUCION_LLUVIA = 1
 
