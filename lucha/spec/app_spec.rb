@@ -46,4 +46,9 @@ describe 'App' do
     result = `ruby app.rb lluvia perro mano humano mano`
     expect(result.strip).to eq 'error: personaje desconocido'
   end
+
+  it '10- arma desconocida lanza error' do
+    result = `ruby app.rb lluvia humano varita humano mano`
+    expect(result.strip).to eq 'error: arma desconocida'
+  end
 end

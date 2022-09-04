@@ -14,13 +14,13 @@ arma_uno = ARGV[2]
 personaje_dos = ARGV[3]
 arma_dos = ARGV[4]
 
-validador = ValidadorEnfrentamiento.new(escenario, personaje_uno, arma_uno, personaje_dos, arma_dos)
-arma_uno = FactoryArma.new.crear_arma(arma_uno)
-arma_dos = FactoryArma.new.crear_arma(arma_dos)
+validador = ValidadorEnfrentamiento.new
 
 escenario = validador.validar_creacion_escenario(escenario)
 personaje_uno = validador.validar_creacion_personaje(personaje_uno)
 personaje_dos = validador.validar_creacion_personaje(personaje_dos)
+arma_uno = validador.validar_creacion_arma(arma_uno)
+arma_dos = validador.validar_creacion_arma(arma_dos)
 
 luchador_uno = Luchador.new(personaje_uno, arma_uno, escenario)
 luchador_dos = Luchador.new(personaje_dos, arma_dos, escenario)

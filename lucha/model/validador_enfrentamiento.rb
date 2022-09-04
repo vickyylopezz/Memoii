@@ -1,12 +1,4 @@
 class ValidadorEnfrentamiento
-  def initialize(escenario, personaje_uno, arma_uno, personaje_dos, arma_dos)
-    @escenario = escenario
-    @personaje_uno = personaje_uno
-    @personaje_dos = personaje_dos
-    @arma_uno = arma_uno
-    @arma_dos = arma_dos
-  end
-
   def validar_creacion_escenario(escenario)
     begin
       escenario = FactoryEscenario.new.crear_escenario(escenario)
@@ -25,5 +17,15 @@ class ValidadorEnfrentamiento
       exit 1
     end
     personaje
+  end
+
+  def validar_creacion_arma(arma)
+    begin
+      arma = FactoryArma.new.crear_arma(arma)
+    rescue ArmaDesconocidaError
+      puts 'error: arma desconocida'
+      exit 1
+    end
+    arma
   end
 end

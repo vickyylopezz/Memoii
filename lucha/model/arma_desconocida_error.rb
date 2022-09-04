@@ -1,0 +1,2 @@
+class ArmaDesconocidaError < StandardError
+end
