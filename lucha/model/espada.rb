@@ -1,6 +1,6 @@
 class Espada
   INCREMENTO_ESPADA = 2
   def incrementar_puntaje(puntaje)
-    puntaje * 2
+    puntaje * INCREMENTO_ESPADA
   end
 end
