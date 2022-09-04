@@ -51,4 +51,9 @@ describe 'App' do
     result = `ruby app.rb lluvia humano varita humano mano`
     expect(result.strip).to eq 'error: arma desconocida'
   end
+
+  it '11- sin entrada muestra error' do
+    result = `ruby app.rb humano varita humano mano`
+    expect(result.strip).to eq 'error: entrada incompleta'
+  end
 end

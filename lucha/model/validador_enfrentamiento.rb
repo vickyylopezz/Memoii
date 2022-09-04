@@ -1,4 +1,14 @@
 class ValidadorEnfrentamiento
+  def initialize(escenario, luchador_uno, arma_uno, luchador_dos, arma_dos)
+    if escenario.nil? || luchador_uno.nil? || luchador_dos.nil? || arma_uno.nil? || arma_dos.nil?
+      salir; end
+  end
+
+  def salir
+    puts 'error: entrada incompleta'
+    exit 1
+  end
+
   def validar_creacion_escenario(escenario)
     begin
       escenario = FactoryEscenario.new.crear_escenario(escenario)

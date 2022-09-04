@@ -14,8 +14,7 @@ arma_uno = ARGV[2]
 personaje_dos = ARGV[3]
 arma_dos = ARGV[4]
 
-validador = ValidadorEnfrentamiento.new
-
+validador = ValidadorEnfrentamiento.new(escenario, personaje_uno, arma_uno, personaje_dos, arma_dos)
 escenario = validador.validar_creacion_escenario(escenario)
 personaje_uno = validador.validar_creacion_personaje(personaje_uno)
 personaje_dos = validador.validar_creacion_personaje(personaje_dos)
