@@ -1,5 +1,5 @@
 class Mano
-  def incrementar_puntaje(_puntaje)
-    10
+  def incrementar_puntaje(puntaje)
+    puntaje
   end
 end
