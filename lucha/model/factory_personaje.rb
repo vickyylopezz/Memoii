@@ -1,6 +1,7 @@
 require_relative 'lobo'
 require_relative 'humano'
 require_relative 'vampiro'
+require_relative 'personaje_desconocido_error'
 
 class FactoryPersonaje
   def crear_personaje(personaje)
@@ -10,6 +11,8 @@ class FactoryPersonaje
       Lobo.new
     elsif personaje == 'vampiro'
       Vampiro.new
+    else
+      raise PersonajeDesconocidoError
     end
   end
 end

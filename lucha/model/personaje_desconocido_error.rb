@@ -1,0 +1,2 @@
+class PersonajeDesconocidoError < StandardError
+end

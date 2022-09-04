@@ -7,13 +7,23 @@ class ValidadorEnfrentamiento
     @arma_dos = arma_dos
   end
 
-  def validar_escenario
+  def validar_creacion_escenario(escenario)
     begin
-      escenario = FactoryEscenario.new.crear_escenario(@escenario)
+      escenario = FactoryEscenario.new.crear_escenario(escenario)
     rescue EscenarioDesconocidoError
       puts 'error: escenario desconocido'
       exit 1
     end
     escenario
+  end
+
+  def validar_creacion_personaje(personaje)
+    begin
+      personaje = FactoryPersonaje.new.crear_personaje(personaje)
+    rescue PersonajeDesconocidoError
+      puts 'error: personaje desconocido'
+      exit 1
+    end
+    personaje
   end
 end
