@@ -2,6 +2,8 @@ require_relative 'noche'
 require_relative 'lluvia'
 require_relative 'escenario_desconocido_error'
 require_relative 'bosque'
+require_relative 'ciudad'
+require_relative 'estadio'
 
 class FactoryEscenario
   def crear_escenario(escenario)
