@@ -6,7 +6,9 @@ class Lobo
     3
   end
 
-  def calcular_puntaje_en(_escenario)
+  def calcular_puntaje_en(escenario)
+    return 9 if escenario.instance_of? Bosque
+
     3
   end
 end

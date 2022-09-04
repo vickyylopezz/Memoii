@@ -1,0 +1,2 @@
+class Bosque
+end

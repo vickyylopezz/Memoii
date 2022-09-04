@@ -1,6 +1,7 @@
 require_relative 'noche'
 require_relative 'lluvia'
 require_relative 'escenario_desconocido_error'
+require_relative 'bosque'
 
 class FactoryEscenario
   def crear_escenario(escenario)
@@ -12,6 +13,8 @@ class FactoryEscenario
       Noche.new
     elsif escenario == 'lluvia'
       Lluvia.new
+    elsif escenario == 'bosque'
+      Bosque.new
     else
       raise EscenarioDesconocidoError
     end

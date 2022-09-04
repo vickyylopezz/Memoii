@@ -12,6 +12,7 @@ describe 'Enfrentamiento' do
   let(:estadio) {FactoryEscenario.new.crear_escenario("estadio")}
   let(:ciudad) {FactoryEscenario.new.crear_escenario("ciudad")}
   let(:lluvia) {FactoryEscenario.new.crear_escenario("lluvia")}
+  let(:bosque) {FactoryEscenario.new.crear_escenario("bosque")}
 
   it '01-Humano-con-espada vs Humano-con-espada en estadio da como resultado empate' do
     expect(enfrentamiento.luchar(Luchador.new(humano, espada, estadio), Luchador.new(humano, espada, estadio))).to eq  'empate'
@@ -132,4 +133,9 @@ describe 'Enfrentamiento' do
   it '30-Vampiro-con-mano vs Humano-con-espada en ciudad da como resultado empate' do
     expect(enfrentamiento.luchar(Luchador.new(vampiro, mano, ciudad), Luchador.new(humano, espada, ciudad))).to eq  'empate'
   end
+
+  it '31-Humano-con-espada vs Lobo-con-cuchillo en bosque da como resultado gana 2' do
+    expect(enfrentamiento.luchar(Luchador.new(humano, espada, bosque), Luchador.new(lobo, cuchillo, bosque))).to eq  'gana 2'
+  end
+
 end

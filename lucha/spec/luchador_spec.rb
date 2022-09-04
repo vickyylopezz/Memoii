@@ -10,6 +10,7 @@ describe 'Luchador' do
   let(:ciudad) {FactoryEscenario.new.crear_escenario("ciudad")}
   let(:lluvia) {FactoryEscenario.new.crear_escenario("lluvia")}
   let(:noche) {FactoryEscenario.new.crear_escenario("noche")}
+  let(:bosque) {FactoryEscenario.new.crear_escenario("bosque")}
 
   it '01-Puntaje de humano-con-espada en estadio es 3' do
     expect(Luchador.new(humano, espada, estadio).puntaje).to eq 3
@@ -61,5 +62,13 @@ describe 'Luchador' do
 
   it '13-Puntaje de humano-con-mano en noche es 2' do
     expect(Luchador.new(humano, mano, noche).puntaje).to eq 2
+  end
+
+  it '14-Puntaje de Humano-con-espada en bosque es 3' do
+    expect(Luchador.new(humano, espada, bosque).puntaje).to eq 3
+  end
+
+  it '15-Puntaje de Lobo-con-cuchillo en bosque es 14' do
+    expect(Luchador.new(lobo, cuchillo, bosque).puntaje).to eq 14
   end
 end
