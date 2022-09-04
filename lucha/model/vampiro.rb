@@ -4,4 +4,8 @@ class Vampiro
 
     4
   end
+
+  def calcular_puntaje_en(_estadio)
+    4
+  end
 end
