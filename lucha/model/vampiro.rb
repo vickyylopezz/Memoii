@@ -5,7 +5,9 @@ class Vampiro
     4
   end
 
-  def calcular_puntaje_en(_estadio)
+  def calcular_puntaje_en(escenario)
+    return 2 if escenario.instance_of? Estadio
+
     4
   end
 end
