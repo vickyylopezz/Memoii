@@ -1,7 +1,7 @@
 class Ciudad
   INCREMENTO_CIUDAD = 2
   def incrementar_puntaje_para_humano(puntaje)
-    puntaje * 2
+    puntaje * INCREMENTO_CIUDAD
   end
 
   def incrementar_puntaje_para_lobo(puntaje)
