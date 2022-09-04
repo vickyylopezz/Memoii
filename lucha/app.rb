@@ -6,6 +6,7 @@ require_relative 'model/estadio'
 require_relative 'model/factory_arma'
 require_relative 'model/factory_personaje'
 require_relative 'model/factory_escenario'
+require_relative 'model/validador_enfrentamiento'
 
 escenario = ARGV[0]
 personaje_uno = ARGV[1]
@@ -13,16 +14,13 @@ arma_uno = ARGV[2]
 personaje_dos = ARGV[3]
 arma_dos = ARGV[4]
 
+validador = ValidadorEnfrentamiento.new(escenario, personaje_uno, arma_uno, personaje_dos, arma_dos)
 personaje_uno = FactoryPersonaje.new.crear_personaje(personaje_uno)
 personaje_dos = FactoryPersonaje.new.crear_personaje(personaje_dos)
 arma_uno = FactoryArma.new.crear_arma(arma_uno)
 arma_dos = FactoryArma.new.crear_arma(arma_dos)
-begin
-  escenario = FactoryEscenario.new.crear_escenario(escenario)
-rescue EscenarioDesconocidoError
-  puts 'error: escenario desconocido'
-  exit 1
-end
+escenario = validador.validar_escenario
+
 luchador_uno = Luchador.new(personaje_uno, arma_uno, escenario)
 luchador_dos = Luchador.new(personaje_dos, arma_dos, escenario)
 ganador = Enfrentamiento.new.luchar(luchador_uno, luchador_dos)
