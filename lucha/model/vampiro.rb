@@ -1,8 +1,7 @@
 class Vampiro
+  PUNTAJE_VAMPIRO = 2
   def calcular_puntaje_con(arma)
-    return 2 if arma.instance_of? Mano
-
-    4
+    arma.incrementar_puntaje(PUNTAJE_VAMPIRO)
   end
 
   def calcular_puntaje_en(escenario)
