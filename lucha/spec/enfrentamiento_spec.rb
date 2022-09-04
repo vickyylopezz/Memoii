@@ -120,4 +120,16 @@ describe 'Enfrentamiento' do
   it '27-Vampiro-con-cuchillo vs Lobo-con-mano en lluvia da como resultado gana 2' do
     expect(enfrentamiento.luchar(Luchador.new(vampiro, cuchillo, lluvia), Luchador.new(lobo, mano, lluvia))).to eq  'gana 2'
   end
+
+  it '28-Vampiro-con-espada vs Humano-con-cuchillo en noche da como resultado gana 1' do
+    expect(enfrentamiento.luchar(Luchador.new(vampiro, espada, noche), Luchador.new(humano, cuchillo, noche))).to eq  'gana 1'
+  end
+
+  it '29-Lobo-con-cuchillo vs Humano-con-cuchillo en noche da como resultado gana 1' do
+    expect(enfrentamiento.luchar(Luchador.new(lobo, cuchillo, noche), Luchador.new(humano, cuchillo, noche))).to eq  'gana 1'
+  end
+
+  it '30-Vampiro-con-mano vs Humano-con-espada en ciudad da como resultado empate' do
+    expect(enfrentamiento.luchar(Luchador.new(vampiro, mano, ciudad), Luchador.new(humano, espada, ciudad))).to eq  'empate'
+  end
 end
