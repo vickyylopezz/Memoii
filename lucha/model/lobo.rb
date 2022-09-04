@@ -5,8 +5,6 @@ class Lobo
   end
 
   def calcular_puntaje_en(escenario)
-    return 9 if escenario.instance_of? Bosque
-
-    3
+    escenario.incrementar_puntaje_para_lobo(PUNTAJE_LOBO)
   end
 end

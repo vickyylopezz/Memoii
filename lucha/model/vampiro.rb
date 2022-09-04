@@ -5,9 +5,6 @@ class Vampiro
   end
 
   def calcular_puntaje_en(escenario)
-    return 1 if escenario.instance_of? Lluvia
-    return 4 if escenario.instance_of? Noche
-
-    2
+    escenario.incrementar_puntaje_para_vampiro(PUNTAJE_VAMPIRO)
   end
 end

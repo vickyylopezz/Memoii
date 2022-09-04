@@ -5,8 +5,6 @@ class Humano
   end
 
   def calcular_puntaje_en(escenario)
-    return 2 if escenario.instance_of? Ciudad
-
-    1
+    escenario.incrementar_puntaje_para_humano(PUNTAJE_HUMANO)
   end
 end
