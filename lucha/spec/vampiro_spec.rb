@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Humano' do
+describe 'Vampiro' do
   let(:vampiro) {FactoryPersonaje.new.crear_personaje("vampiro")}
   let(:espada) {FactoryArma.new.crear_arma("espada")}
   let(:mano) {FactoryArma.new.crear_arma("mano")}
