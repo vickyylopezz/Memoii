@@ -5,7 +5,7 @@ class Lobo
     3
   end
 
-  def calcular_puntaje_en(_estadio)
+  def calcular_puntaje_en(_escenario)
     3
   end
 end

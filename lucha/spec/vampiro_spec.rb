@@ -6,6 +6,7 @@ describe 'Humano' do
   let(:mano) {FactoryArma.new.crear_arma("mano")}
   let(:noche) {FactoryEscenario.new.crear_escenario("noche")}
   let(:estadio) {FactoryEscenario.new.crear_escenario("estadio")}
+  let(:ciudad) {FactoryEscenario.new.crear_escenario("ciudad")}
 
   it '01-Puntaje de Vampiro-con-espada es 4' do
     expect(vampiro.calcular_puntaje_con(espada)).to eq 4
@@ -23,4 +24,7 @@ describe 'Humano' do
     expect(vampiro.calcular_puntaje_en(estadio)).to eq 2
   end
 
+  it '05-Puntaje de vampiro en ciudad es 2' do
+    expect(vampiro.calcular_puntaje_en(ciudad)).to eq 2
+  end
 end
