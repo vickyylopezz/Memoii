@@ -1,0 +1,2 @@
+class EscenarioDesconocidoError < StandardError
+end
