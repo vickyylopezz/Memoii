@@ -10,4 +10,9 @@ describe Camion do
     camion = Camion.new
     expect(camion.calcular_coeficiente_impositivo(1600)).to eq 3
   end
+
+  it 'coeficiente impositivo de camion con cilindrada 2000 es 4' do
+    camion = Camion.new
+    expect(camion.calcular_coeficiente_impositivo(2000)).to eq 4
+  end
 end

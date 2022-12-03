@@ -10,4 +10,4 @@ cotizador = Cotizador.new
 vehiculo = FactoryTipoVehiculo.new.crear_vehiculo(tipo)
 ci = cotizador.calcular_coeficiente_impositivo(vehiculo, Integer(cilindrada))
 
-puts "ci:#{ci}"
+puts "ci:#{ci} & vm:500.0"
