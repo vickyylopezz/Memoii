@@ -40,5 +40,10 @@ describe 'App' do
     resultado = `ruby app.rb camion/1600`
     expect(resultado.strip).to eq "ci:3"
   end
+
+  it 'coeficiente impositivo de camion con cilindrada 2000 es 4' do
+    resultado = `ruby app.rb camion/2000`
+    expect(resultado.strip).to eq "ci:4"
+  end
 end
 
