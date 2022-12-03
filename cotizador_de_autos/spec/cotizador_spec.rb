@@ -42,4 +42,10 @@ describe 'Cotizador' do
     cotizador = Cotizador.new()
     expect(cotizador.calcular_coeficiente_impositivo(camion, 1000)).to eq 2
   end
+
+  it 'coeficiente impositivo de camion con cilindrada 1600 es 3' do
+    camion = Camion.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_coeficiente_impositivo(camion, 1600)).to eq 3
+  end
 end
