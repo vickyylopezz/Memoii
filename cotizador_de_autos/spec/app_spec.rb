@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe 'App' do
-  it 'coeficiente impositivo de auto con cilindrada 1000 es 1' do
+  it 'coeficiente impositivo de auto con cilindrada 1000 es 1 y valor de mercado 500.0' do
     resultado = `ruby app.rb auto/1000/1000`
     expect(resultado.strip).to eq "ci:1 & vm:500.0"
   end
 
-  xit 'coeficiente impositivo de auto con cilindrada 1600 es 1' do
+  it 'coeficiente impositivo de auto con cilindrada 1600 es 1 y valor de mercado ' do
     resultado = `ruby app.rb auto/1600`
-    expect(resultado.strip).to eq "ci:1"
+    expect(resultado.strip).to eq "ci:1 & vm:500.0"
   end
 
   xit 'coeficiente impositivo de auto con cilindrada 2000 es 2' do
