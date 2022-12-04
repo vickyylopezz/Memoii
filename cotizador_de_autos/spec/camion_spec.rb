@@ -20,4 +20,14 @@ describe Camion do
     camion = Camion.new
     expect(camion.valor_mercado(1000, 1000)).to eq 1000.0
   end
+
+  it 'valor de mercado de camion con cilindrada 1600 y 1000 kilometros es 1153.8' do
+    camion = Camion.new
+    expect(camion.valor_mercado(1000, 1600)).to eq 1153.8
+  end
+
+  it 'valor de mercado de camion con cilindrada 2000 y 1000 kilometros es ' do
+    camion = Camion.new
+    expect(camion.valor_mercado(1000, 2000)).to eq 1333.3
+  end
 end
