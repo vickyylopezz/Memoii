@@ -90,4 +90,22 @@ describe 'Cotizador' do
     cotizador = Cotizador.new()
     expect(cotizador.calcular_valor_mercado(camioneta, 2000, 1000)).to eq 1500.0
   end
+
+  it 'valor de mercado de camion con cilindrada 1000 y 1000 kilometros es 1000.0' do
+    camion = Camion.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_valor_mercado(camion, 1000, 1000)).to eq 1000.0
+  end
+
+  it 'valor de mercado de camion con cilindrada 1600 y 1000 kilometros es 1153.8' do
+    camion = Camion.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_valor_mercado(camion, 1600, 1000)).to eq 1153.8
+  end
+
+  it 'valor de mercado de camion con cilindrada 2000 y 1000 kilometros es 1333.3' do
+    camion = Camion.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_valor_mercado(camion, 2000, 1000)).to eq 1333.3
+  end
 end
