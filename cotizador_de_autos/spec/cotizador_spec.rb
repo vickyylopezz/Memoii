@@ -60,4 +60,16 @@ describe 'Cotizador' do
     cotizador = Cotizador.new()
     expect(cotizador.calcular_valor_mercado(auto, 1000, 1000)).to eq 500.0
   end
+
+  it 'valor de mercado de auto con cilindrada 1600 y 1000 kilometros es 500.0' do
+    auto = Auto.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_valor_mercado(auto, 1600, 1000)).to eq 500.0
+  end
+
+  it 'valor de mercado de auto con cilindrada 2000 y 1000 kilometros es 500.0' do
+    auto = Auto.new
+    cotizador = Cotizador.new()
+    expect(cotizador.calcular_valor_mercado(auto, 2000, 1000)).to eq 1000.0
+  end
 end
