@@ -1,6 +1,6 @@
 class Camion
   BASE = 2000
-  def calcular_coeficiente_impositivo(cilindrada)
+  def coeficiente_impositivo(cilindrada)
     (BASE * cilindrada) / 1_000_000
   end
 end

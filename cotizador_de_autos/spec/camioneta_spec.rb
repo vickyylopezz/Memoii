@@ -3,16 +3,21 @@ require 'spec_helper'
 describe 'Camioneta' do
   it 'coeficiente impositivo de camioneta con cilindrada 1000 es 1' do
     camioneta = Camioneta.new
-    expect(camioneta.calcular_coeficiente_impositivo(1000)).to eq 1
+    expect(camioneta.coeficiente_impositivo(1000)).to eq 1
   end
 
   it 'coeficiente impositivo de camioneta con cilindrada 1600 es 2' do
     camioneta = Camioneta.new
-    expect(camioneta.calcular_coeficiente_impositivo(1600)).to eq 2
+    expect(camioneta.coeficiente_impositivo(1600)).to eq 2
   end
 
   it 'coeficiente impositivo de camioneta con cilindrada 2000 es 3' do
     camioneta = Camioneta.new
-    expect(camioneta.calcular_coeficiente_impositivo(2000)).to eq 3
+    expect(camioneta.coeficiente_impositivo(2000)).to eq 3
+  end
+
+  it 'valor de mercado de auto con cilindrada 1000 y 1000 kilometros es 750.0' do
+    camioneta = Camioneta.new
+    expect(camioneta.valor_mercado(1000, 1000)).to eq 750.0
   end
 end
