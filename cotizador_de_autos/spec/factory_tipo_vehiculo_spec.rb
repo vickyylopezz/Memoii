@@ -16,4 +16,9 @@ describe 'FactoryTipoVehiculo' do
     factory = FactoryTipoVehiculo.new()
     expect(factory.crear_vehiculo('camion')).to be_an_instance_of(Camion)
   end
+
+  it 'debe crear una instancia de Camioneta al pasarle camioneta como parametro' do
+    factory = FactoryTipoVehiculo.new()
+    expect{factory.crear_vehiculo('colectivo')}.to raise_error(VehiculoInvalido)
+  end
 end

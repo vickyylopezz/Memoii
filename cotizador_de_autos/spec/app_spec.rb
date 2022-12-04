@@ -45,5 +45,10 @@ describe 'App' do
     resultado = `ruby app.rb camion/2000/1000`
     expect(resultado.strip).to eq "ci:4 & vm:1333.3"
   end
+
+  it 'vehiculo desconocido lanza error' do
+    resultado = `ruby app.rb colectivo/2000/1000`
+    expect(resultado.strip).to eq "error: vehiculo desconocido"
+  end
 end
 
