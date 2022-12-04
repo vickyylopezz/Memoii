@@ -20,4 +20,9 @@ describe 'Auto' do
     auto = Auto.new
     expect(auto.calcular_valor_mercado(1000, 1000)).to eq 500.0
   end
+
+  it 'valor de mercado de auto con cilindrada 1600 y 1000 kilometros es 500.0' do
+    auto = Auto.new
+    expect(auto.calcular_valor_mercado(1600, 1000)).to eq 384.6
+  end
 end
