@@ -50,5 +50,11 @@ describe 'App' do
     resultado = `ruby app.rb colectivo/2000/1000`
     expect(resultado.strip).to eq "error: vehiculo desconocido"
   end
+
+  it 'cilindrada desconocida lanza error' do
+    resultado = `ruby app.rb auto/5000/1000`
+    expect(resultado.strip).to eq "error: cilindrada desconocida"
+  end
+
 end
 
