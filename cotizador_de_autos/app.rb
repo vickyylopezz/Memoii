@@ -6,7 +6,7 @@ datos = datos.split('/')
 validador = Validador.new
 vehiculo = validador.validar_vehiculo(datos[0])
 cilindrada = validador.validar_cilindrada(datos[1])
-kilometraje = datos[2]
+kilometraje = validador.validar_kilometraje(datos[2])
 
 cotizador = Cotizador.new
 

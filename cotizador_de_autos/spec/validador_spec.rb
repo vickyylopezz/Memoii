@@ -11,4 +11,8 @@ describe 'Validador' do
     expect(validador.validar_cilindrada("1000")).to eq(1000)
   end
 
+  it 'debe devolver el kilometraje al pasarle un kilometraje como parametro para validarlo' do
+    validador = Validador.new()
+    expect(validador.validar_kilometraje("4")).to eq(4)
+  end
 end

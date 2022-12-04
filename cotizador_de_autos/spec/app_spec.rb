@@ -56,5 +56,10 @@ describe 'App' do
     expect(resultado.strip).to eq "error: cilindrada desconocida"
   end
 
+  it 'kilometraje invalido lanza error' do
+    resultado = `ruby app.rb auto/1000/1000.6`
+    expect(resultado.strip).to eq "error: kilometraje invalido"
+  end
+
 end
 
