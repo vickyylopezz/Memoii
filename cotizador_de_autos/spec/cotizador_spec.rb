@@ -55,9 +55,9 @@ describe 'Cotizador' do
     expect(cotizador.calcular_coeficiente_impositivo(camion, 2000)).to eq 4
   end
 
-  xit 'valor de mercado de auto con 1000 kilometros es 500.0' do
+  it 'valor de mercado de auto con cilindrada 1000 y 1000 kilometros es 500.0' do
     auto = Auto.new
     cotizador = Cotizador.new()
-    expect(cotizador.calcular_valor_de_mercado(auto, 1000)).to eq 500.0
+    expect(cotizador.calcular_valor_mercado(auto, 1000, 1000)).to eq 500.0
   end
 end
