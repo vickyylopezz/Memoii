@@ -31,19 +31,19 @@ describe 'App' do
     expect(resultado.strip).to eq "ci:3 & vm:1500.0"
   end
 
-  xit 'coeficiente impositivo de camion con cilindrada 1000 es 2' do
-    resultado = `ruby app.rb camion/1000`
-    expect(resultado.strip).to eq "ci:2"
+  it 'coeficiente impositivo de camion con cilindrada 1000 es 2' do
+    resultado = `ruby app.rb camion/1000/1000`
+    expect(resultado.strip).to eq "ci:2 & vm:1000.0"
   end
 
-  xit 'coeficiente impositivo de camion con cilindrada 1600 es 3' do
-    resultado = `ruby app.rb camion/1600`
-    expect(resultado.strip).to eq "ci:3"
+  it 'coeficiente impositivo de camion con cilindrada 1600 es 3' do
+    resultado = `ruby app.rb camion/1600/1000`
+    expect(resultado.strip).to eq "ci:3 & vm:1153.8"
   end
 
-  xit 'coeficiente impositivo de camion con cilindrada 2000 es 4' do
-    resultado = `ruby app.rb camion/2000`
-    expect(resultado.strip).to eq "ci:4"
+  it 'coeficiente impositivo de camion con cilindrada 2000 es 4' do
+    resultado = `ruby app.rb camion/2000/1000`
+    expect(resultado.strip).to eq "ci:4 & vm:1333.3"
   end
 end
 
