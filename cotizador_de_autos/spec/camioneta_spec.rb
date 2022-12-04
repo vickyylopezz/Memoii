@@ -16,8 +16,18 @@ describe 'Camioneta' do
     expect(camioneta.coeficiente_impositivo(2000)).to eq 3
   end
 
-  it 'valor de mercado de auto con cilindrada 1000 y 1000 kilometros es 750.0' do
+  it 'valor de mercado de camioneta con cilindrada 1000 y 1000 kilometros es 750.0' do
     camioneta = Camioneta.new
     expect(camioneta.valor_mercado(1000, 1000)).to eq 750.0
+  end
+
+  it 'valor de mercado de camioneta con cilindrada 1600 y 1000 kilometros es 1153.8' do
+    camioneta = Camioneta.new
+    expect(camioneta.valor_mercado(1000, 1600)).to eq 1153.8
+  end
+
+  it 'valor de mercado de camioneta con cilindrada 2000 y 1000 kilometros es 1500.0' do
+    camioneta = Camioneta.new
+    expect(camioneta.valor_mercado(1000, 2000)).to eq 1500.0
   end
 end

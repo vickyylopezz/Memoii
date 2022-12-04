@@ -4,7 +4,7 @@ class Camioneta
     (BASE * cilindrada) / 1_000_000
   end
 
-  def valor_mercado(_kilometraje, _cilindrada)
-    750.0
+  def valor_mercado(kilometros, cilindrada)
+    (3 * (coeficiente_impositivo(cilindrada) * BASE) / ((kilometros + cilindrada) * 0.003)).round(1)
   end
 end
