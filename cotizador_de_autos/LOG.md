@@ -1,0 +1,15 @@
+- Arranque este ejercicio agarrando solo el caso del calculo del coeficiente impositivo, sin tener el cuenta el valor de mercado.
+  - Primero tomé un Auto con cilindrada 1000.
+  - Luego un Auto con cilindrada 1600.
+  - Luego un Auto con cilindrada 2000.
+  - Luego una camioneta con cilindrada 1000.
+  - Luego una camioneta con cilindrada 1600.
+  - Luego agregue el factory para los dos vehiculos.
+  - Agrego clase Cotizador para calcular ci.
+  - Agrego logica de calculo de ci.
+  - Agrego camion con cilindradas.
+- Agrego valor de mercado
+  - Primero para auto con cilindrada 1000, 1600 y 2000
+  - Luego para camioneta con cilindrada 1000, 1600 y 2000
+  - Luego para camion con cilindrada 1000, 1600 y 2000
+- Agrego validaciones para vehiculo, cilindrada y kilometraje

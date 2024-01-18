@@ -1,0 +1,2 @@
+class VehiculoInvalido < StandardError
+end
